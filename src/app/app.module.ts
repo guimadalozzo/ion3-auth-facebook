@@ -3,9 +3,17 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-
+import * as firebase from 'firebase';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+firebase.initializeApp({
+  apiKey: "AIzaSyCwtXyjKMB1wWpL0OLSxgq-D9448XRm_Os",
+  authDomain: "thinnydev.firebaseapp.com",
+  databaseURL: "https://thinnydev.firebaseio.com",
+  projectId: "thinnydev",
+  storageBucket: "thinnydev.appspot.com",
+  messagingSenderId: "441146784699"
+});
 
 @NgModule({
   declarations: [
